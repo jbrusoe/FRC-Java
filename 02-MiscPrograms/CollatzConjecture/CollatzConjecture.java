@@ -1,3 +1,7 @@
+//Collatz Conjecture in Java
+//Written by: Jeff Brusoe
+//Last Updated: September 3, 2021
+
 import java.util.Scanner;
 
 public class CollatzConjecture {
@@ -6,28 +10,42 @@ public class CollatzConjecture {
         int n = -1;
 
         System.out.println("Collatz Conjecture Demo in Java");
-        
-        while (n == -1) {
+       
+        n = GetPositiveInteger(scanner, n);
+
+        CollatzConjectureCalc(n);
+    }
+
+    private static int GetPositiveInteger(Scanner scanner, int n) {
+        while (true) {
             System.out.print("Enter a positive integer: ");
+            n = scanner.nextInt();
 
-            try {
-                n = scanner.nextInt();
-                scanner.next();
-
-                if (n>0) {
-                    System.out.println("Entered Value: " + n);
-                }
-                else {
-                    System.out.println("Please enter a positive integer");
-                    n = -1;
-                }
-            } catch (Exception e) {
-                System.out.println("Please only enter a positive integer");
+            if (n > 0) {
+                System.out.println("Entered Value: " + n);
+                break;
+            }
+            else {
+                System.out.println("Please enter a positive integer");
                 n = -1;
             }
-
         }
 
         scanner.close();
+        return n;
+    }
+
+    private static void CollatzConjectureCalc(int n) {
+        System.out.println("Performing main part of Collatz calculation...");
+        while (n != 1) {
+            System.out.println("n = " + n);
+
+            if (n % 2 == 0) {
+                n = n / 2;
+            }
+            else { 
+                n = 3*n + 1;
+            }
+        }
     }
 }
