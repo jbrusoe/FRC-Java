@@ -1,6 +1,10 @@
 {
     "java.project.sourcePaths": [
+        "01-JavaBasics/10-RandomNumberGuessing",
+        "01-JavaBasics/09-IfThen-1",
+        "01-JavaBasics/08-RandomNumbers",
+        "01-JavaBasics/05-WhileLoop-2",
         "01-JavaBasics/03-KeyboardInput2",
-        "01-JavaBasics/05-WhileLoop-2"
+        "01-JavaBasics"
     ]
 }
