@@ -1,3 +1,4 @@
+// Demonstration of generating 100 random numbers in Java
 import java.util.Random;
 
 public class RandomNumbers {

@@ -1,3 +1,7 @@
+// Java - If/Then Demo
+// Generates random numbers from 0 to 99 and tells if they
+// are greater than, less than, or equal to 50.
+
 import java.util.Random;
 
 public class IfThenDemo {
@@ -10,7 +14,7 @@ public class IfThenDemo {
             System.out.println(i + " - " + Rand);
 
             if (Rand > 50) {
-                System.out.println("Great than 50");
+                System.out.println("Greater than 50");
             }
             else if (Rand < 50) {
                 System.out.println("Less than 50");
