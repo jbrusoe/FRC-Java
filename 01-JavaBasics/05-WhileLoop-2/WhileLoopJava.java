@@ -1,6 +1,7 @@
+//While Loop Java Demo #2 with Break Statement
+
 public class WhileLoopJava 
 {
-
 	public static void main(String args[]) {
 		int i = 10;
 

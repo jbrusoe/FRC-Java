@@ -1,6 +1,6 @@
-public class WhileLoopJava 
-{
+//Java While Loop Demo - Count from 10 to 1
 
+public class WhileLoopJava {
 	public static void main(String args[]) {
 		int i = 10;
 
