@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "04-OOP",
+        "03-AdvancedJavaFeatures/01-TryCatchBlock",
+        "01-JavaBasics/01-HelloWorld"
+    ]
+}
