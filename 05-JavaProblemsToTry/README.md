@@ -14,7 +14,7 @@
 
 ![image](https://user-images.githubusercontent.com/40579055/137594901-7e189680-29ec-49f0-8e94-596d18d365a6.png)
 
-4. What happens if you enter "abc" instead of a number in the previous problem? 
+4. What happens if you enter "abc" instead of a number in the previous problem? Add code to fix this issue.
 
 ![image](https://user-images.githubusercontent.com/40579055/137595683-60ceda3f-1d09-4314-aa39-98b45b2d2850.png)
 ![image](https://user-images.githubusercontent.com/40579055/137595663-bdd1571a-c1a9-4a7e-9260-0d1e75053621.png)
