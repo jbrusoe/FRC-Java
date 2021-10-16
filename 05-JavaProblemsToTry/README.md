@@ -10,4 +10,6 @@
 ![image](https://user-images.githubusercontent.com/40579055/137593400-7ef4e890-0f1d-4cc9-af15-4531f3de59a6.png)
 
 
-3. 
+3. Add code to the previous problem to prevent any numbers less than zero from being entered.
+
+![image](https://user-images.githubusercontent.com/40579055/137594901-7e189680-29ec-49f0-8e94-596d18d365a6.png)
