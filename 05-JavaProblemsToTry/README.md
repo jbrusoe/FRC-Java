@@ -19,3 +19,11 @@
 ![image](https://user-images.githubusercontent.com/40579055/137595683-60ceda3f-1d09-4314-aa39-98b45b2d2850.png)
 ![image](https://user-images.githubusercontent.com/40579055/137595663-bdd1571a-c1a9-4a7e-9260-0d1e75053621.png)
 
+5. Ask the user to enter the radius of a circle. Then calculate the circle’s area and circumference.
+
+![image](https://user-images.githubusercontent.com/40579055/137634859-4bc46736-6b82-44b3-8215-8eac9cc64980.png)
+
+6. Correct the output of the previous program so tha the circumference and area display out to two decimal points.
+
+
+
