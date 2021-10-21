@@ -27,6 +27,12 @@
 
 ![CircleCalculations2-Output2](https://user-images.githubusercontent.com/40579055/137644581-007c07a9-b29c-45f7-b69f-538e3d5bb017.JPG)
 
+7. Write a program that has the user enter three numbers and averages them.
+
+![image](https://user-images.githubusercontent.com/40579055/138366670-01380f4a-f771-4cae-bd8a-b198eec27aad.png)
+
+8. Convert the calculation of the average in the previous problem to be done in a method with the output being displayed in the main method. (The output should be identical to the previous problem.)
+
 
 
 
