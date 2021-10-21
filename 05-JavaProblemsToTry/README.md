@@ -31,6 +31,8 @@
 
 ![image](https://user-images.githubusercontent.com/40579055/138366670-01380f4a-f771-4cae-bd8a-b198eec27aad.png)
 
+8. Convert the calculation of the average in the previous problem to be done in a method with the output being displayed in the main method. (The output should be identical to the previous problem.)
+
 
 
 
