@@ -33,6 +33,7 @@
 
 8. Convert the calculation of the average in the previous problem to be done in a method with the output being displayed in the main method. (The output should be identical to the previous problem.)
 
+9. Convert the code from the previous problem to store the entered numbers into an array. (The output should be identical to problem 7.)
 
 
 
