@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class ConvertDecimalToBinary2 {
+public class ConvertDecimalToBinary3 {
 
     public static void main(String[] args) {
         Scanner UserInput = new Scanner(System.in);
