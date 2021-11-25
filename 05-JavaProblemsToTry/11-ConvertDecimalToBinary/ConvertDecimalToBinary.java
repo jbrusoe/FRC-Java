@@ -6,7 +6,7 @@ public class ConvertDecimalToBinary {
         Scanner UserInput = new Scanner(System.in);
         int[] BinaryValue = new int[10]; //implies max decimal value is 33554432
         int BinaryIndex = 0;
-        int EnteredNumber = 9;
+        int EnteredNumber = -1;
 
         System.out.print("\nEnter a positive integer: ");
         EnteredNumber = UserInput.nextInt();
