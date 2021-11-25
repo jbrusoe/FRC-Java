@@ -10,7 +10,6 @@ public class ConvertDecimalToBinary {
 
         System.out.print("\nEnter a positive integer: ");
         EnteredNumber = UserInput.nextInt();
-        //UserInput.close();
 
         System.out.println("Initial Number: " + EnteredNumber);
 
@@ -26,5 +25,6 @@ public class ConvertDecimalToBinary {
         }
 
         System.out.println("");
+        UserInput.close();
     }
 }
