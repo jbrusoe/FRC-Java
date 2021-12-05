@@ -16,16 +16,17 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * project.
  */
 public class Robot extends TimedRobot {
+
+  DigitalOutput GreenLED = new DigitalOutput(1);
+  DigitalOutput RedLED = new DigitalOutput(2);
+  DigitalOutput YellowLED = new DigitalOutput(3);
+
   private static final String kDefaultAuto = "Default";
   private static final String kCustomAuto = "My Auto";
   private String m_autoSelected;
   private final SendableChooser<String> m_chooser = new SendableChooser<>();
 
   private final RomiDrivetrain m_drivetrain = new RomiDrivetrain();
-  
-  DigitalOutput GreenLED = new DigitalOutput(1);
-  DigitalOutput RedLED = new DigitalOutput(2);
-  DigitalOutput YellowLED = new DigitalOutput(3);
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -33,14 +34,13 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
+    GreenLED.set(true);
+    RedLED.set(true);
+    YellowLED.set(true); 
 
     m_chooser.setDefaultOption("Default Auto", kDefaultAuto);
     m_chooser.addOption("My Auto", kCustomAuto);
     SmartDashboard.putData("Auto choices", m_chooser);
-
-    GreenLED.set(true);
-    RedLED.set(true);
-    YellowLED.set(true); 
   }
 
   /**
