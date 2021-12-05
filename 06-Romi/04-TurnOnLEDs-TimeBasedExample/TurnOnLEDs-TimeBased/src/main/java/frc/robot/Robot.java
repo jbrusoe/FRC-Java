@@ -37,6 +37,10 @@ public class Robot extends TimedRobot {
     m_chooser.setDefaultOption("Default Auto", kDefaultAuto);
     m_chooser.addOption("My Auto", kCustomAuto);
     SmartDashboard.putData("Auto choices", m_chooser);
+
+    GreenLED.set(true);
+    RedLED.set(true);
+    YellowLED.set(true); 
   }
 
   /**
@@ -61,9 +65,6 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousInit() {
-    GreenLED.set(true);
-    RedLED.set(true);
-    YellowLED.set(true); 
     m_autoSelected = m_chooser.getSelected();
     // m_autoSelected = SmartDashboard.getString("Auto Selector", kDefaultAuto);
     System.out.println("Auto selected: " + m_autoSelected);
