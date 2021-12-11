@@ -12,5 +12,8 @@ public class StringReverse {
             ReversedString += EnteredString.charAt(i);
         }
         System.out.println("The reverse of " + EnteredString + " is " + ReversedString + ".");
+    
+        UserInput.close();
     }
+
 }
