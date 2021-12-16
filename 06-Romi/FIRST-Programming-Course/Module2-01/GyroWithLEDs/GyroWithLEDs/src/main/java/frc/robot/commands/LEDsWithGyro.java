@@ -36,7 +36,7 @@ public class LEDsWithGyro extends CommandBase {
       IO.setRedLed(false);
     }
     else if (DT.getGyroAngleZ() <= -10) {
-      IO.SetGreenLED(false);
+      IO.setGreenLed(false);
       IO.setRedLed(true);
     }
     else {
