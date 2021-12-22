@@ -4,9 +4,14 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.RomiDrivetrain;
 
 public class DefaultDrive extends CommandBase {
+  RomiDrivetrain DT;
+  Joystick JS;
+
   /** Creates a new DefaultDrive. */
   public DefaultDrive() {
     // Use addRequirements() here to declare subsystem dependencies.
