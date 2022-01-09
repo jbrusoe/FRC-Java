@@ -3,22 +3,27 @@ import java.util.ArrayList;
 
 public class GoldbachConjecture {
     static final int MaxNumber = 10000;
-    ArrayList<Integer> PrimeNumbers = new ArrayList<Integer>();
+    static ArrayList<Integer> PrimeNumbers = new ArrayList<Integer>();
     
-    public static GeneratePrimeNumberArray() {
-        ArrrayList.add(2);
-
-        for (int i = 3; i <= MaxNumber; i = i + 2; {
-            PrimeNumbers.add(i);
+    public static boolean isPrime(int n) 
+    {
+        for(int i=2;i<n;i++) {
+            if(n%i==0)
+                return false;
         }
 
-        System.out.println("Array List: ");
-        for (int i = 0; i < PrimeNumbers.size(); i++) {
-            System.out.println(PrimeNumbers.get(i));
-        }
+        return true;
     }
 
     public static void main(String[] args) {
         System.out.println("Max Number: " + MaxNumber);
+
+        for (int i = 2; i <= MaxNumber; i++) {
+            if (isPrime(i)) {
+                PrimeNumbers.add(i);
+            }
+       }
+
+        System.out.println("Prime Numbers: " + PrimeNumbers);
     }
 }
