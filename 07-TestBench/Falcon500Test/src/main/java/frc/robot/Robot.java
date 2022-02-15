@@ -4,20 +4,14 @@
 
 package frc.robot;
 
-import com.revrobotics.CANSparkMax;
-import com.revrobotics.CANSparkMaxLowLevel;
-import com.revrobotics.CANSparkMax.IdleMode;
-import com.revrobotics.CANSparkMaxLowLevel.MotorType;
-
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
-import com.revrobotics.ColorSensorV3;
-import edu.wpi.first.wpilibj.util.Color;
-import edu.wpi.first.wpilibj.I2C;
-
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import com.ctre.phoenix.motorcontrol.Faults;
+import com.ctre.phoenix.motorcontrol.InvertType;
+import com.ctre.phoenix.motorcontrol.TalonFXInvertType;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -29,13 +23,9 @@ public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
 
   private RobotContainer m_robotContainer;
-  private CANSparkMax Neo;
-  private int NeoCANID = 57;
-  private CANSparkMaxLowLevel.MotorType NeoBrushless = MotorType.kBrushless;
-  private CANSparkMax.IdleMode NeoIdle = IdleMode.kCoast;
 
-  private final I2C.Port i2cPort = I2C.Port.kOnboard;
-  private final ColorSensorV3 m_colorSensor = new ColorSensorV3(i2cPort);
+  private static int Falcon500CANID = 42;
+  WPI_TalonFX Falcon = new WPI_TalonFX(Falcon500CANID);
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -46,7 +36,8 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
-    Neo = new CANSparkMax(NeoCANID,NeoBrushless);
+
+    Falcon.setSelectedSensorPosition(0);
   }
 
   /**
@@ -97,21 +88,21 @@ public class Robot extends TimedRobot {
     if (m_autonomousCommand != null) {
       m_autonomousCommand.cancel();
     }
+
+    
+    System.out.println("Initial Position: " + Falcon.getSelectedSensorPosition());
   }
 
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    //Neo.set(0.1);
-    Color detectedColor = m_colorSensor.getColor();
-
-    SmartDashboard.putNumber("Red", detectedColor.red);
-    SmartDashboard.putNumber("Green", detectedColor.green);
-    SmartDashboard.putNumber("Blue", detectedColor.blue);
+    if (Falcon.getSelectedSensorPosition() > 50000) {
+      Falcon.setSelectedSensorPosition(0);
+    }
     
-    //String ColorFromSensor = (string)m_colorSensor.getColor();
-    System.out.println(m_colorSensor.getColor());
+    Falcon.set(0.2);
 
+    System.out.println("Current Position: " + Falcon.getSelectedSensorPosition());
   }
 
   @Override
