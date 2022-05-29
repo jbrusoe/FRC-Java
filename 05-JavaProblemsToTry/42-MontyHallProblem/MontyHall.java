@@ -100,3 +100,4 @@ public class MontyHall {
         System.out.println("Switched Ratio: " + SwitchedRatio);
     }
 }
+
