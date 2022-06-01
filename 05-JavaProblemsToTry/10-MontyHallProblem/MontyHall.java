@@ -12,8 +12,8 @@ public class MontyHall {
         int SwitchedCorrectCount = 0;
         int CorrectDoor = 0;
         int BlockedDoor = 0;
-        int SwitchedRatio = 0;
-        int NoSwitchRatio = 0;
+        double SwitchedPercentage = 0.0;
+        double NoSwitchPercentage = 0.0;
 
         Random random = new Random();
 
@@ -91,13 +91,13 @@ public class MontyHall {
         System.out.println("Summary Information:");
         System.out.println("Total number of trials: " + Trials);
 
-        System.out.println("Correct Count - No Switch: " + CorrectCount);
-        NoSwitchRatio = CorrectCount/(Trials);
-        System.out.println("No switch ratio: " + NoSwitchRatio);
+        System.out.println("\nCorrect Count - No Switch: " + CorrectCount);
+        NoSwitchPercentage = 100*((double)CorrectCount/Trials);
+        System.out.println("No switch percentage: " + String.format("%.1f", NoSwitchPercentage) + "%");
 
-        System.out.println("Correct Count - With Switch: " + SwitchedCorrectCount);
-        SwitchedRatio = SwitchedCorrectCount/(Trials);
-        System.out.println("Switched Ratio: " + SwitchedRatio);
+        System.out.println("\nCorrect Count - With Switch: " + SwitchedCorrectCount);
+        SwitchedPercentage = 100*((double)SwitchedCorrectCount/(Trials));
+        System.out.println("Switched percentage: " + String.format("%.1f", SwitchedPercentage) + "%");
     }
 }
 
