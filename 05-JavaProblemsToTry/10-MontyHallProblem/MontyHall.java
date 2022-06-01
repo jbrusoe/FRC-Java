@@ -41,11 +41,12 @@ public class MontyHall {
             }
         }
 
-        for(int i=0; i<Trials;i++) {
+        for(int i=1; i<Trials+1;i++) {
             GuessedDoor = 1;
             System.out.println("Trial " + i);
 
             CorrectDoor = random.nextInt(3) + 1;
+            System.out.println("Initial Guessed Door: " + GuessedDoor);
             System.out.println("Correct Door: " + CorrectDoor);
 
             if (GuessedDoor == CorrectDoor) {
@@ -72,18 +73,18 @@ public class MontyHall {
                     BlockedDoor = 2;
                     GuessedDoor = 3;
                 }
-
             }
             
-            System.out.println("Switched Door: " + GuessedDoor);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            System.out.println("Blocked Door: " + BlockedDoor);
+            System.out.println("Guessed Door after Switch: " + GuessedDoor);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 
-        if (GuessedDoor == CorrectDoor) {
-            SwitchedCorrectCount++;
-            System.out.println("Switched Correct");
-        }
-        else{
-            System.out.println("Switched Incorrect");
-        }
+            if (GuessedDoor == CorrectDoor) {
+                SwitchedCorrectCount++;
+                System.out.println("Switched to correct door");
+            }
+            else{
+                System.out.println("Switched to incorrect door");
+            }
 
             System.out.println("********************");
         }
@@ -91,12 +92,12 @@ public class MontyHall {
         System.out.println("Summary Information:");
         System.out.println("Total number of trials: " + Trials);
 
-        System.out.println("\nCorrect Count - No Switch: " + CorrectCount);
+        System.out.println("\nCorrect Count - Without Switch: " + CorrectCount);
         NoSwitchPercentage = 100*((double)CorrectCount/Trials);
         System.out.println("No switch percentage: " + String.format("%.1f", NoSwitchPercentage) + "%");
 
         System.out.println("\nCorrect Count - With Switch: " + SwitchedCorrectCount);
-        SwitchedPercentage = 100*((double)SwitchedCorrectCount/(Trials));
+        SwitchedPercentage = 100*((double)SwitchedCorrectCount/Trials);
         System.out.println("Switched percentage: " + String.format("%.1f", SwitchedPercentage) + "%");
     }
 }
